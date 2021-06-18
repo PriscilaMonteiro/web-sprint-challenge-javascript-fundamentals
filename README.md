@@ -29,13 +29,47 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+`.for Each` is used for previewing data , it does not automatically returns a new array.
+`.map` is used for converting data, it returns automatically a new array.
+
 2. Explain the difference between a callback and a higher order function.
+
+Callback functions are passed into other function as arguments and Higher Order Function receives other function as argument.
 
 3. Can you explain what a closure is and how you used it in the counter function? 
 
+function summation(n) {
+  let counter = 0;
+  for (let i = 1; i <= n; i++) {
+    counter += i;
+  }
+  return counter;
+}
+
+
+console.log(summation(4));
+
+
+Closure is a combination of a function and its ability to remember variables in the outer scope.
+It is used for inheritance, the inner function always has access to the arguments of its outer function. 
+In the Loop, if you use the keyword "let", in each iteration you will have a new i. In other words, each iteration of the loop creates a new closure.
+
+
 4. Describe the four principles of the 'this' keyword.
 
+Window/Global Object Binding: 'this' is the window/global object in non-strict mode, and undefined in strict mode.
+
+Implicit Biding: when 'this' is pointed to the left of the dot when the function is called.
+
+New Binding: When a function is invoked as a constructor function using the keyword 'new', this points to the new object that's created.
+
+Explicit Biding: We can explicitly tell that this is pointed to a certain value when we use call, apply or bind.
+
 5. Why do we need super() in an extended class?
+Super is a keyword that refers to the parent class.
+Super calls the constructor of the parent class and access the parent's properties and methods.
+
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
