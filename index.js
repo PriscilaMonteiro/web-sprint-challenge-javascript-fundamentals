@@ -30,15 +30,15 @@ myFunction();
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
 function summation(n) {
-  let sum = 0;
+  let counter = 0;
   for (let i = 1; i <= n; i++) {
-    sum += i;
+    counter += i;
   }
-  return sum;
+  return counter;
 }
 
 
-console.log(summation(4));
+console.log('task2' , summation(4));
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -63,9 +63,17 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+  // function animalNames(/*Your Code Here*/){
+  //   /*Your Code Here*/
+  // }
+  const animalNames = [];
+  zooAnimals.forEach (function(zooAnimals) {
+    return animalNames.push(`Name: ${zooAnimals.animal_name}, Scientific: ${zooAnimals.scientific_name}.`)
+  })
+  
+  console.log(animalNames);
+
+  
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -74,8 +82,9 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(zooAnimals){
+    const newArray = zooAnimals.map(item=>item.animal_name.toLowerCase());
+    return newArray;
   }
   
   
@@ -84,8 +93,11 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(zooAnimals, population){
+    const newArray = zooAnimals.filter(function(item){
+      return item.population <5;
+    })
+    return newArray;
   }
   
 
@@ -95,8 +107,11 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+  function USApop(zooAnimals){
+    const value = zooAnimals.reduce(function(acc, item){
+      return acc + item.population;
+    },0);
+    return value;
   }
   
   
