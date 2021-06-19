@@ -18,8 +18,7 @@ myFunction();
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
 // When nestedFunction reaches into the outer scope myFunction and access internal is when a closure happens.
-// Closure is used for inheritance, in this case, the nesting function can access the parent scope that Way.
-
+// Because nestedFunction is declared within the scope of my function. And thus it has acces to its variables.
 
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
@@ -149,9 +148,9 @@ function greeting(firstName, lastName){
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
   // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-  // console.log(consume(2, 2, add)); // 4
-  // console.log(consume(10, 16, multiply)); // 160
-  // console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+  console.log(consume(2, 2, add)); // 4
+  console.log(consume(10, 16, multiply)); // 160
+  console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
   
   
 // 🦁💪 Stretch: If you haven't already, convert your array method callbacks into arrow functions - make sure you comment out this section before you submit your work 🦁💪
